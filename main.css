@@ -225,6 +225,10 @@ tbody td {
     font-size: 18px;
 }
 
+tbody td:hover {
+    color: rgb(110, 0, 0);
+}
+
 
 
 /* ------------------- 

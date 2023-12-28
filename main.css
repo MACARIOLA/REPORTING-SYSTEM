@@ -139,7 +139,7 @@ nav ul li:nth-child(4) a {
 
 .contact-info {
     margin-right: 100px; 
-    margin-left: -80px; 
+    margin-left: -100px; 
 }
 
 .quick-links {
@@ -148,11 +148,11 @@ nav ul li:nth-child(4) a {
 }
 
 .footer-link {
-    margin-right: 150px;
-    margin-left: -80px;
+    margin-right: 100px;
+    margin-left: -100px;
 }
 
-.contact-info:hover, .footer-link:hover {
+.footer-link:hover {
     transition: all 0.3s ease;
     color: black;
     cursor: pointer;
@@ -199,14 +199,16 @@ nav ul li:nth-child(4) a {
     padding: 15px;
     color: black;
     font-size: 18px;
+    border-radius: 5px;
 }
 
 thead th {
     border: 1px solid black;
     padding: 15px;
     background-color: #85674B;
-    color: maroon;
-    font-size: 28px;
+    color: rgb(110, 0, 0);
+    font-size: 24px;
+    border-radius: 5px;
 }
 
 tbody tr {

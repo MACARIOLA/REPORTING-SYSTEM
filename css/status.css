@@ -70,13 +70,6 @@ nav ul li:first-child a:hover {
     border-top: 4px solid #85674B;
 }
 
-nav ul li:last-child a:hover {
-    color: #FFFFFF;
-    background-color: #85674B;
-    border-right: 1px solid #3D3A38;
-    border-top: 4px solid #85674B;
-}
-
 nav ul li:nth-child(2) a:hover {
     color: #FFFFFF;
     background-color: #85674B;
@@ -96,6 +89,13 @@ nav ul li:nth-child(4) a {
     border-right: 3px solid black;
     border-bottom: 4px solid #D8D5D0;
     border-top: 4px solid black;
+}
+
+nav ul li:last-child a:hover {
+    color: #FFFFFF;
+    background-color: #85674B;
+    border-right: 1px solid #3D3A38;
+    border-top: 4px solid #85674B;
 }
 
 
@@ -227,6 +227,36 @@ tbody td {
 
 tbody td:hover {
     color: rgb(110, 0, 0);
+}
+
+
+
+/* ------------------- 
+        CREDITS
+ ------------------- */
+ .img_cert {
+    border: 4px solid black;
+    margin-top: 225px;
+    margin-left: 20px;
+    width: 905px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.img_cert:hover {
+    transform: scale(1.02);
+}
+
+.content {
+    margin-top: -550px;
+    margin-left: 1000px;
+    margin-right: 40px;
+}
+
+.text-justify {
+    text-align: justify;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 28px;
+    color: #7D0302;
 }
 
 

@@ -1,7 +1,7 @@
 /* ------------------- 
         RESETS
  ------------------- */
-* {
+ * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -55,7 +55,7 @@ nav ul li a {
     border-top: 4px solid #FEEDE8;
 }
 
-nav ul li:nth-child(4) a {
+nav ul li:first-child a {
     border-left: 1px solid #FEEDE8;
 }
 
@@ -63,17 +63,10 @@ nav ul li:last-child a {
     border-right: 1px solid #FEEDE8;
 }
 
-nav ul li:nth-child(4) a:hover {
+nav ul li:first-child a:hover {
     color: #FFFFFF;
     background-color: #85674B;
     border-left: 1px solid #3D3A38;
-    border-top: 4px solid #85674B;
-}
-
-nav ul li:last-child a:hover {
-    color: #FFFFFF;
-    background-color: #85674B;
-    border-right: 1px solid #3D3A38;
     border-top: 4px solid #85674B;
 }
 
@@ -83,20 +76,27 @@ nav ul li:nth-child(2) a:hover {
     border-top: 4px solid #85674B;
 }
 
-nav ul li:nth-child(3) a:hover {
-    color: #FFFFFF;
-    background-color: #85674B;
-    border-top: 4px solid #85674B;
-}
-
-nav ul li:first-child a {
+nav ul li:nth-child(3) a {
     color: black;
     background-color: #D8D5D0;
+    border-left: 3px solid black;
     border-right: 3px solid black;
     border-bottom: 4px solid #D8D5D0;
     border-top: 4px solid black;
 }
 
+nav ul li:nth-child(4) a:hover {
+    color: #FFFFFF;
+    background-color: #85674B;
+    border-top: 4px solid #85674B;
+}
+
+nav ul li:last-child a:hover {
+    color: #FFFFFF;
+    background-color: #85674B;
+    border-right: 1px solid #3D3A38;
+    border-top: 4px solid #85674B;
+}
 
 
 /* ------------------- 

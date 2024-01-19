@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>PUP - RLCMRS | REPORT</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!---------------
+          FONTS
+    ---------------->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap">
+
+    <!---------------
+          FONTS
+    ---------------->
+    <link rel="icon" href="images/PUPLogo.png" type="image/x-icon">
+    
+    <!---------------
+         MAIN CSS
+    ---------------->
+    <link rel="stylesheet" href="css/report.css">
+    <link rel="stylesheet" href="css/dropdown.css">
+</head>
+
+
+
+<body>
+    <!---------------
+      NAVIGATION BAR
+    ---------------->
+    <header>
+        <nav>
+            <ul>
+                <li><a href="home.html" id="home">Home</a></li>
+                <li><a href="report.html" id="report">Report</a></li>
+                <li><a href="statistics.html" id="statistics">Statistics</a></li>
+                <li><a href="status.html" id="status">Status</a></li>
+                <li><a href="credits.html" id="credits">Credits</a></li>
+            </ul>
+        </nav>
+    </header>
+
+
+
+    <main class="table-section">
+        <div class="table-container">
+            <table class="custom-table">
+                <thead>
+                    <tr>
+                        <th class="dropdown clickable" data-target="room"><label for="room"><span>Room</span></label><input type="checkbox" id="room">
+                            <ul class="slide">
+                                <li><a>OLD 201</a></li>
+                                <li><a>OLD 202</a></li>
+                                <li><a>OLD 203</a></li>
+                                <li><a>OLD 204</a></li>
+                            </ul>
+                        </th>
+                        <th class="dropdown clickable" data-target="problem"><label for="problem"><span>Problem</span></label><input type="checkbox" id="problem">
+                            <ul class="slide">
+                                <li><a>DIRTY</a></li>
+                                <li><a>DAMAGED</a></li>
+                                <li><a>DEFECTIVE</a></li>
+                                <li><a>ELECTRICITY</a></li>
+                            </ul>
+                        </th>
+                        <th class="dropdown clickable" data-target="course"><label for="course"><span>Course</span></label><input type="checkbox" id="course">
+                            <ul class="slide">
+                                <li><a>BSIT 1 - 1</a></li>
+                                <li><a>BSIT 1 - 2</a></li>
+                                <li><a>BSIT 1 - 3</a></li>
+                                <li><a>BSIT 1 - 4</a></li>
+                            </ul>
+                        </th>
+                        <th class="dropdown clickable" data-target="professor"><label for="professor"><span>Professor</span></label><input type="checkbox" id="professor">
+                            <ul class="slide">
+                                <li><a>MR. MIGUEL</a></li>
+                                <li><a>MR. DELA CRUZ</a></li>
+                                <li><a>MS. QUINSAYAS</a></li>
+                                <li><a>MR. MARAVILLA</a></li>
+                            </ul>
+                        </th>
+                        <th>Report</th>
+                    </tr>
+                </thead>
+            </table>
+        </div>
+    </main>
+
+
+
+
+    <!---------------
+         FOOTER
+    ---------------->
+    <footer>
+        <div class="footer-content">
+            <span class="contact-title">Contact Us:</span>
+            <span class="contact-info">binan@pup.edu.ph</span>
+            <span class="contact-info">(049) 513-5034</span>
+            <span class="quick-links">Quick Links:</span>
+            <a href="https://www.pup.edu.ph/about/" class="footer-link">About PUP</a>
+            <a href="https://www.pup.edu.ph/about/contactus" class="footer-link">Contacts</a>
+        </div>
+    </footer>
+</body>
+</html>

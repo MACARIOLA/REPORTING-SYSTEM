@@ -22,7 +22,6 @@ body {
     top: 0; 
     width: 100%;
     font-size: 32px;
-    font-family: 'Montserrat', sans-serif;
     background-color: #FEEDE8;
     z-index: 1;
 }
@@ -56,34 +55,8 @@ nav ul li a {
     border-top: 4px solid #FEEDE8;
 }
 
-nav ul li:first-child a {
-    border-left: 1px solid #FEEDE8;
-}
 
-nav ul li:last-child a {
-    border-right: 1px solid #FEEDE8;
-}
-
-nav ul li:first-child a:hover {
-    color: #FFFFFF;
-    background-color: #85674B;
-    border-left: 1px solid #3D3A38;
-    border-top: 4px solid #85674B;
-}
-
-nav ul li:nth-child(2) a:hover {
-    color: #FFFFFF;
-    background-color: #85674B;
-    border-top: 4px solid #85674B;
-}
-
-nav ul li:nth-child(3) a:hover {
-    color: #FFFFFF;
-    background-color: #85674B;
-    border-top: 4px solid #85674B;
-}
-
-nav ul li:nth-child(4) a {
+nav ul li.active a {
     color: black;
     background-color: #D8D5D0;
     border-left: 3px solid black;
@@ -92,10 +65,20 @@ nav ul li:nth-child(4) a {
     border-top: 4px solid black;
 }
 
-nav ul li:last-child a:hover {
+nav ul li:not(.active) a:hover {
     color: #FFFFFF;
     background-color: #85674B;
-    border-right: 1px solid #3D3A38;
+    border-left: 1px solid #3D3A38;
+    border-top: 4px solid #85674B;
+}
+
+nav ul li:not(.active):first-child a:hover,
+nav ul li:not(.active):nth-child(2) a:hover,
+nav ul li:not(.active):nth-child(3) a:hover,
+nav ul li:not(.active):nth-child(4) a:hover,
+nav ul li:not(.active):last-child a:hover {
+    color: #FFFFFF;
+    background-color: #85674B;
     border-top: 4px solid #85674B;
 }
 
@@ -108,7 +91,6 @@ nav ul li:last-child a:hover {
     position: fixed;
     bottom: 0;
     width: 100%;
-    font-family: 'Montserrat', sans-serif;
     background-color: #FEEDE8;
     border-top: 4px solid black;
     padding: 10px;
@@ -164,24 +146,20 @@ nav ul li:last-child a:hover {
 /* ------------------- 
       SOME DESIGNS
  ------------------- */
-/* Custom Scrollbar Styles */
 ::-webkit-scrollbar {
     width: 12px;
 }
 
-/* Track */
 ::-webkit-scrollbar-track {
     background: #FEEDE8;
     border-radius: 50px;
 }
 
-/* Handle */
 ::-webkit-scrollbar-thumb {
     background: #424547;
     border-radius: 50px;
 }
 
-/* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
     background: #555;
 }

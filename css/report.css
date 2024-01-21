@@ -108,3 +108,27 @@ tbody td:hover {
 .dropdown input:checked + .slide {
     height: 120px;
 }
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.report-button {
+    background-color: #85674b; 
+    color: #black; 
+    padding: 10px 20px;
+	font-family: Montserrat;
+    font-size: 24px;
+	border: none;
+    border-radius: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.report-button:hover {
+    background-color: white; 
+}

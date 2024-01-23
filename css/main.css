@@ -154,6 +154,13 @@ footer {
     background: #555;
 }
 
+footer::-webkit-scrollbar {
+    width: 0.5rem;
+    height: 0.5rem;
+    display: none;
+}
+
+
 
 
 /* ------------------- 

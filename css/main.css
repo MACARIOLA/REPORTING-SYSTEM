@@ -17,7 +17,7 @@ body {
 /* ------------------- 
     NAVIGATION BAR
  ------------------- */
- header {
+header {
     position: fixed;
     top: 0; 
     width: 100%;
@@ -86,11 +86,13 @@ nav ul li:not(.active):last-child a:hover {
 
 /* ------------------- 
         FOOTER
- ------------------- */
- footer {
+------------------- */
+footer {
     position: fixed;
     bottom: 0;
     width: 100%;
+    max-height: 150px;
+    overflow: auto; 
     background-color: #FEEDE8;
     border-top: 4px solid black;
     padding: 10px;
@@ -98,50 +100,38 @@ nav ul li:not(.active):last-child a:hover {
     margin-top: 10px;
 }
 
-.footer-content {
+.footer-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.footer-table td {
+    padding: 10px;
     color: #7D0302;
-    font-size: 22px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    background-color: transparent;
+    border: none;
 }
 
-.contact-title, .quick-links {
-    font-size: 32px;
-}
-
-.contact-info, .footer-link {
-    text-decoration: none;
-    color: #7D0302;
-}
-
-.contact-title {
-    margin-left: 75px;
-    margin-right: 20px;
-}
-
-.contact-info {
-    margin-right: 100px; 
-    margin-left: -100px; 
-}
-
+.contact-title,
 .quick-links {
-    margin-left: 20px;
-    margin-right: 20px;
+    font-size: 27px;
+}
+
+.contact-info, 
+.footer-link {
+    font-size: 20px;
 }
 
 .footer-link {
-    margin-right: 100px;
-    margin-left: -100px;
+    text-decoration: none;
+    color: #7D0302;
+    transition: all 0.3s ease;
 }
 
-.footer-link:hover {
-    transition: all 0.3s ease;
+.footer-table td.quick-links:hover .footer-link {
     color: black;
     cursor: pointer;
 }
-
-
 
 /* ------------------- 
       SOME DESIGNS
@@ -163,3 +153,94 @@ nav ul li:not(.active):last-child a:hover {
 ::-webkit-scrollbar-thumb:hover {
     background: #555;
 }
+
+
+
+/* ------------------- 
+      MEDIA QUERIES
+------------------- */
+
+    /* -- FOR NAVBAR --  */
+    @media only screen and (max-width: 1200px) {
+        nav ul li a {
+            padding: 15px;
+        }
+    }
+
+    @media only screen and (max-width: 992px) {
+        nav ul li a {
+            padding: 10px;
+        }
+    }
+
+    @media only screen and (max-width: 768px) {
+        header {
+            font-size: 24px;
+        }
+    }
+
+    @media only screen and (max-width: 576px) {
+        header {
+            font-size: 20px;
+        }
+    }
+
+    @media only screen and (max-width: 480px) {
+        nav ul {
+            flex-direction: column;
+        }
+
+        nav ul li {
+            text-align: left;
+        }
+    }
+
+
+
+    /* -- FOR FOOTER -- */
+    @media only screen and (max-width: 1200px) {
+        .footer-content {
+            font-size: 18px;
+            text-align: center;
+        }
+        
+        .footer-table td {
+            text-align: center;
+        }
+    }
+    
+    @media only screen and (max-width: 768px) {
+        .footer-content {
+            font-size: 16px;
+            text-align: center;
+        }
+    
+        .footer-table td {
+            display: block;
+            width: 100%;
+            box-sizing: border-box;
+        }
+    
+        .contact-title,
+        .quick-links {
+            font-size: 20px;
+        }
+    
+        .contact-info,
+        .footer-link {
+            font-size: 16px;
+        }
+    }
+    
+    @media only screen and (max-width: 576px) {
+        .footer-content {
+            font-size: 14px;
+            display: block;
+            text-align: center;
+        }
+    
+        .footer-table td {
+            padding: 10px;
+            text-align: center;
+        }
+    }

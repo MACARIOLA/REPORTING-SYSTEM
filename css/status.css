@@ -13,7 +13,7 @@
     left: 50%;
     transform: translate(-50%, -50%);
     width: 99%;
-    max-height: calc(80vh - 100px); 
+    max-height: calc(80vh - 100px);
     overflow-y: auto;
 }
 
@@ -50,8 +50,8 @@
     background-color: #928374;
 }
 
-.status-table tbody td:hover {
-    color: rgb(110, 0, 0);
+.status-table tbody td.state-cell:hover {
+    color: white;
     transform: scale(0.96);
 }
 

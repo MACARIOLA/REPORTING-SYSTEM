@@ -1,5 +1,5 @@
 /* ------------------- 
-        STATUS
+      STATISTICS
 ------------------- */
 .main {
     padding-top: 250px;
@@ -50,18 +50,9 @@
     background-color: #928374;
 }
 
-.status-table tbody td:hover,
-.popup-btn:hover {
+.status-table tbody .view-report-cell:hover {
     color: rgb(255, 255, 255);
     transform: scale(0.96);
-}
-
-.popup-btn {
-    font-size: 18px;
-    background-color: transparent;
-    border: none;
-    cursor: pointer;
-    width: 100%;
 }
 
 .popup-container {
@@ -85,24 +76,21 @@
     text-align: center;
     font-size: 30px;
     width: 1000px;
-    position: relative; /* Add this line */
+    position: relative;
 }
 
 .popup-content p {
-    margin: 30px 0; /* Adjust the values as needed */
+    margin: 30px 0;
 }
 
-
 .back-btn {
-    margin: 20px px 25px -20px;
+    margin: 20px 0 25px -20px;
     height: 40px;
     width: 200px; 
     font-size: 20px; 
     border-radius: 55px; 
     border-color: 1px solid black;
     transition: all 0.3s ease;
-    position: center; /* Add this line */
-    bottom: 0; /* Add this line */
 }
 
 .back-btn:hover {

@@ -59,7 +59,7 @@ input[type="text"],
 input[type="password"] {
     width: 150%;
     padding: 12px;
-    border: none;
+    border: 1px solid #000000;
     background: #f1f1f1;
     border-radius: 5px;
 }
@@ -87,11 +87,12 @@ input[type="password"]:focus {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 90px -100px 2px 0;
+    margin: 50px -100px 2px 0;
 }
 
 .login-btn,
 .forgot-btn {
+    font-size: 15px;
     background-color: transparent;
     color: #7D0302;
     border: none;

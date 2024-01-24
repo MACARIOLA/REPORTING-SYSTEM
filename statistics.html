@@ -62,74 +62,74 @@
                     </thead>
                     <tbody>
                         <tr data-index="1">
-                            <td>ComLab 2</td>
+                            <td>Old Building | ComLab 2</td>
                             <td>Dirty</td>
                             <td>BSIT 1-1</td>
                             <td>Mr. Miguel</td>
-                            <td><button class="popup-btn" onclick="openPopup()">Click Here...</button></td>
+                            <td class="view-report-cell" onclick="openPopup()">Click Here...</td>
                         </tr>                        
                         <tr data-index="2">
-                            <td>ComLab 2</td>
+                            <td>Old Building | ComLab 2</td>
                             <td>Dirty</td>
                             <td>BSIT 1-1</td>
                             <td>Mr. Miguel</td>
-                            <td><button class="popup-btn" onclick="openPopup()">Click Here...</button></td>
+                            <td class="view-report-cell" onclick="openPopup()">Click Here...</td>
                         </tr>                       
                         <tr data-index="3">
-                            <td>ComLab 2</td>
+                            <td>Old Building | ComLab 2</td>
                             <td>Dirty</td>
                             <td>BSIT 1-1</td>
                             <td>Mr. Miguel</td>
-                            <td><button class="popup-btn" onclick="openPopup()">Click Here...</button></td>
+                            <td class="view-report-cell" onclick="openPopup()">Click Here...</td>
                         </tr>                        
                         <tr data-index="4">
-                            <td>ComLab 2</td>
+                            <td>Old Building | ComLab 2</td>
                             <td>Dirty</td>
                             <td>BSIT 1-1</td>
                             <td>Mr. Miguel</td>
-                            <td><button class="popup-btn" onclick="openPopup()">Click Here...</button></td>
+                            <td class="view-report-cell" onclick="openPopup()">Click Here...</td>
                         </tr>                       
                         <tr data-index="5">
-                            <td>ComLab 2</td>
+                            <td>Old Building | ComLab 2</td>
                             <td>Dirty</td>
                             <td>BSIT 1-1</td>
                             <td>Mr. Miguel</td>
-                            <td><button class="popup-btn" onclick="openPopup()">Click Here...</button></td>
+                            <td class="view-report-cell" onclick="openPopup()">Click Here...</td>
                         </tr>                        
                         <tr data-index="6">
-                            <td>ComLab 2</td>
+                            <td>Old Building | ComLab 2</td>
                             <td>Dirty</td>
                             <td>BSIT 1-1</td>
                             <td>Mr. Miguel</td>
-                            <td><button class="popup-btn" onclick="openPopup()">Click Here...</button></td>
+                            <td class="view-report-cell" onclick="openPopup()">Click Here...</td>
                         </tr>                       
                         <tr data-index="7">
-                            <td>ComLab 2</td>
+                            <td>Old Building | ComLab 2</td>
                             <td>Dirty</td>
                             <td>BSIT 1-1</td>
                             <td>Mr. Miguel</td>
-                            <td><button class="popup-btn" onclick="openPopup()">Click Here...</button></td>
+                            <td class="view-report-cell" onclick="openPopup()">Click Here...</td>
                         </tr>                        
                         <tr data-index="8">
-                            <td>ComLab 2</td>
+                            <td>Old Building | ComLab 2</td>
                             <td>Dirty</td>
                             <td>BSIT 1-1</td>
                             <td>Mr. Miguel</td>
-                            <td><button class="popup-btn" onclick="openPopup()">Click Here...</button></td>
+                            <td class="view-report-cell" onclick="openPopup()">Click Here...</td>
                         </tr>                        
                         <tr data-index="9">
-                            <td>ComLab 2</td>
+                            <td>Old Building | ComLab 2</td>
                             <td>Dirty</td>
                             <td>BSIT 1-1</td>
                             <td>Mr. Miguel</td>
-                            <td><button class="popup-btn" onclick="openPopup()">Click Here...</button></td>
+                            <td class="view-report-cell" onclick="openPopup()">Click Here...</td>
                         </tr>                        
                         <tr data-index="10">
-                            <td>ComLab 2</td>
+                            <td>Old Building | ComLab 2</td>
                             <td>Dirty</td>
                             <td>BSIT 1-1</td>
                             <td>Mr. Miguel</td>
-                            <td><button class="popup-btn" onclick="openPopup()">Click Here...</button></td>
+                            <td class="view-report-cell" onclick="openPopup()">Click Here...</td>
                         </tr>                        
                     </tbody>
                 </table>
@@ -137,26 +137,27 @@
         </div>
     </main>
 
-    <!---------------
-      POPUP
-    ---------------->
 
+
+    <!---------------
+          POPUP
+    ---------------->
     <div id="popupContainer" class="popup-container">
         <div class="popup-content">
-            <span class="close-popup" onclick="closePopup()"></span>
             <p>THE (ROOM / LABORATORY) IN THE (BUILDING) REQUIRES (SOLUTION) AS IT IS
             CURRENTLY IN A (STATUS). THE MOST RECENT OCCUPANTS OF THE
             ROOM WE'RE THE STUDENT'S OF (YR - SEC), UNDER THE SUPERVISION OF (PROFESSOR). <br>
-            
             (NUMBER OF REPORT) USERS REPORTED THIS PROBLEM FROM MONDAY, (DATE) TO FRIDAY (DATE).</p>
-            <button id="backBtn" class="back-btn" onclick="closePopup()">GO BACK</button>                    
+            <button id="backBtn" class="back-btn" onclick="closePopup()">GO BACK</button>                 
         </div>
     </div>
 
+
+
+    <!---------------
+        MAIN SCRIPT
+    ---------------->
     <script>
-        // Use a class selector instead of an id selector
-        var popupButtons = document.querySelectorAll('.popup-btn');
-    
         function openPopup() {
             document.getElementById('popupContainer').style.display = 'flex';
         }
@@ -164,13 +165,10 @@
         function closePopup() {
             document.getElementById('popupContainer').style.display = 'none';
         }
-    
-        // Attach click event listener to each button
-        popupButtons.forEach(function (button) {
-            button.addEventListener('click', openPopup);
-        });
     </script>
         
+
+
     <!---------------
           FOOTER
     ---------------->
@@ -184,7 +182,6 @@
                 <td class="quick-links">
                     <a href="https://www.pup.edu.ph/about/" class="footer-link">About us</a>
                 </td>
-                
                 <td class="quick-links">
                     <a href="https://www.pup.edu.ph/about/contactus" class="footer-link">Contacts</a>
                 </td>

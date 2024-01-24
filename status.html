@@ -62,55 +62,55 @@
                         <tbody>
                             <tr>
                                 <td>Old Building | Comlab 2</td>
-                                <td class="state-cell">Standby | Click Here...</td>
+                                <td class="state-cell" onclick="openPopup()">Standby | Click Here...</td>
                                 <td>---</td>
                                 <td>---</td>
                             </tr>
                             <tr>
                                 <td>Comlab 2</td>
-                                <td class="state-cell">Cleaning</td>
+                                <td class="state-cell" onclick="openPopup()">Clining</td>
                                 <td>2023-01-01</td>
                                 <td>---</td>
                             </tr>
                             <tr>
                                 <td>Comlab 2</td>
-                                <td class="state-cell">Fixing</td>
+                                <td class="state-cell" onclick="openPopup()">Fixing</td>
                                 <td>2023-01-01</td>
                                 <td>---</td>
                             </tr>
                             <tr>
                                 <td>Comlab 2</td>
-                                <td class="state-cell">Replacing</td>
+                                <td class="state-cell" onclick="openPopup()">Replacing</td>
                                 <td>2023-01-01</td>
                                 <td>---</td>
                             </tr>
                             <tr>
                                 <td>Comlab 2</td>
-                                <td class="state-cell">Done</td>
+                                <td class="state-cell" onclick="openPopup()">Done</td>
                                 <td>2023-01-01</td>
                                 <td>2023-01-15</td>
                             </tr>
                             <tr>
                                 <td>Comlab 2</td>
-                                <td class="state-cell">Done</td>
+                                <td class="state-cell" onclick="openPopup()">Done</td>
                                 <td>2023-01-01</td>
                                 <td>2023-01-15</td>
                             </tr>
                             <tr>
                                 <td>Comlab 2</td>
-                                <td class="state-cell">Done</td>
+                                <td class="state-cell" onclick="openPopup()">Done</td>
                                 <td>2023-01-01</td>
                                 <td>2023-01-15</td>
                             </tr>
                             <tr>
                                 <td>Comlab 2</td>
-                                <td class="state-cell">Done</td>
+                                <td class="state-cell" onclick="openPopup()">Done</td>
                                 <td>2023-01-01</td>
                                 <td>2023-01-15</td>
                             </tr>
                             <tr>
                                 <td>Comlab 2</td>
-                                <td class="state-cell">Done</td>
+                                <td class="state-cell" onclick="openPopup()">Done</td>
                                 <td>2023-01-01</td>
                                 <td>2023-01-15</td>
                             </tr>
@@ -121,6 +121,33 @@
         </main>
 
 
+    <!---------------
+          POPUP
+    ---------------->
+    <div id="popupContainer" class="popup-container">
+        <div class="popup-content">
+            <p>THE (ROOM / LABORATORY) IN THE (BUILDING) REQUIRES (SOLUTION) AS IT IS
+            CURRENTLY IN A (STATUS). THE MOST RECENT OCCUPANTS OF THE
+            ROOM WE'RE THE STUDENT'S OF (YR - SEC), UNDER THE SUPERVISION OF (PROFESSOR). <br>
+            (NUMBER OF REPORT) USERS REPORTED THIS PROBLEM FROM MONDAY, (DATE) TO FRIDAY (DATE).</p>
+            <button id="backBtn" class="back-btn" onclick="closePopup()">GO BACK</button>                 
+        </div>
+    </div>
+
+
+
+    <!---------------
+        MAIN SCRIPT
+    ---------------->
+    <script>
+        function openPopup() {
+            document.getElementById('popupContainer').style.display = 'flex';
+        }
+    
+        function closePopup() {
+            document.getElementById('popupContainer').style.display = 'none';
+        }
+    </script>
 
         <!---------------
             FOOTER

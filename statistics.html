@@ -5,329 +5,191 @@
     <title>PUP - RLCMRS | STATISTICS</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <!-- FONTS -->
+    
+    <!---------------
+          FONTS
+    ---------------->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap">
 
-    <!-- FAVICON -->
+    <!---------------
+          LOGO
+    ---------------->
     <link rel="icon" href="images/PUPLogo.png" type="image/x-icon">
-
-    <!-- MAIN CSS -->
-    <link rel="stylesheet" href="Statistics.css">
-
-    <!-- STYLES -->
-    <style>
-        /* Reset styles */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            background-color: #D8D5D0;
-        }
-
-        header {
-            position: fixed;
-            top: 0;
-            width: 100%;
-            font-size: 32px;
-            font-family: 'Montserrat', sans-serif;
-            background-color: #FEEDE8;
-            z-index: 1;
-        }
-
-        .main-content {
-            padding-top: 200px;
-            margin-top: 100px;
-        }
-
-        nav ul {
-            list-style: none;
-            margin: 0;
-            padding: 0;
-            display: flex;
-        }
-
-        nav ul li {
-            flex: 1;
-            text-align: center;
-        }
-
-        nav ul li a {
-            display: block;
-            padding: 50px;
-            color: #7D0302;
-            text-decoration: none;
-            transition: all 0.5s ease;
-            border-left: 1px solid black;
-            border-right: 1px solid black;
-            border-bottom: 4px solid black;
-            border-top: 4px solid #FEEDE8;
-        }
-
-        .main {
-            position: relative;
-            padding-top: 250px;
-        }
-
-        .table-section {
-            position: absolute;
-            top: 200px;
-            left: 50%;
-            bottom: 90px;
-            transform: translateX(-50%);
-            width: 100%;
-            z-index: 3;
-            overflow-y: auto;
-            max-height: calc(100vh - 250px);
-        }
-
-        .table-container {
-            width: 100%;
-            overflow-x: auto;
-            padding: 10px;
-        }
-
-        .custom-table {
-            width: 100%;
-            border-collapse: separate;
-            border-spacing: 15px;
-            font-family: 'Montserrat', sans-serif;
-            text-align: center;
-        }
-
-        .custom-table td {
-            border: 1px solid black;
-            padding: 15px;
-            color: black;
-            font-size: 18px;
-            border-radius: 5px;
-        }
-
-        thead th {
-            border: 1px solid black;
-            padding: 15px;
-            background-color: #85674B;
-            color: white;
-            font-size: 24px;
-            border-radius: 5px;
-        }
-
-        tbody tr {
-            background-color: #928374;
-        }
-
-        tbody tr:nth-child(even) {
-            background-color: #928374;
-        }
-
-        tbody td {
-            padding: 15px;
-            color: black;
-            font-size: 18px;
-        }
-
-        tbody td:hover {
-            color: rgb(110, 0, 0);
-        }
-
-        footer {
-            position: fixed;
-            bottom: 0;
-            width: 100%;
-            font-family: 'Montserrat', sans-serif;
-            background-color: #FEEDE8;
-            border-top: 4px solid black;
-            padding: 10px;
-            z-index: 2;
-            margin-top: 10px;
-        }
-
-        .footer-content {
-            color: #7D0302;
-            font-size: 22px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        /* Scrollbar styles */
-        ::-webkit-scrollbar {
-            width: 12px;
-        }
-
-        ::-webkit-scrollbar-thumb {
-            background-color: black;
-            border-radius: 10px;
-        }
-
-        ::-webkit-scrollbar-thumb:hover {
-            background-color: #2e2e2e;
-        }
-
-         body {
-            font-family: 'Montserrat', sans-serif;
-            margin: 0;
-            padding: 0;
-            align-items: center;
-            background-color: #f4f4f4;
-        }
-
-        #notification-container {
-            display: none;
-            position: fixed;
-            top: 200px;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            background-color: #928374;
-            color: #000000;
-            padding: 10px;
-            font-size: 18px;
-            z-index: 1;
-        }
-    </style>
+    
+    <!---------------
+         MAIN CSS
+    ---------------->
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/statistics.css">
 </head>
 
+
+
 <body>
-    <!-- NAVIGATION BAR -->
+    <!---------------
+      NAVIGATION BAR
+    ---------------->
     <header>
         <nav>
             <ul>
-                <li><a href="#" id="home">Home</a></li>
-                <li><a href="#" id="report">Report</a></li>
-                <li><a href="#" id="statistics">Statistics</a></li>
-                <li><a href="#" id="status">Status</a></li>
-                <li><a href="#" id="credits">Credits</a></li>
+                <li><a href="home.html" id="home">Home</a></li>
+                <li><a href="report.html" id="report">Report</a></li>
+                <li class="active"><a href="statistics.html" id="statistics">Statistics</a></li>
+                <li><a href="status.html" id="status">Status</a></li>
+                <li><a href="credits.html" id="credits">Credits</a></li>
             </ul>
         </nav>
     </header>
 
-    <!-- STATISTICS -->
-    <main class="table-section">
-        <div class="table-container">
-            <table class="custom-table">
-                <thead>
-                    <tr>
-                        <th>Room|Laboratory</th>
-                        <th>Problem</th>
-                        <th>Course</th>
-                        <th>Professor</th>
-                        <th>View Full Report</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>Old 201</td>
-                        <td>Dirty</td>
-                        <td>BSIT 1-1</td>
-                        <td>MR. MIGUEL</td>
-                       <td> <button onclick="toggleNotification()">Click Here</button>
-<div id="notification-container">-- FULL REPORT -- 
-THE COMLAB 1 IN THE OLD BUILDING REQUIRES CLEANING AS IT IS CURRENTLY IN A DIRTY STATE.THE MOST RECENT OCCUPANTS OF THE ROOM WERE THE STUDENTS OF BSIT 1-1, UNDER THE SUPERVISION OF MR. JAN MARAVILLA
-THE USERS REPORTED THIS PROBLEM FROM MONDAY, JUNE 05, 2023 TO WEDNESDAY, JUNE 08, 2023   <br><button onclick="toggleNotification()">Back Here</button></div></td>
-                    </tr>
 
-                     <td>Old 202</td>
-                        <td>Dirty</td>
-                        <td>BSIT 1-1</td>
-                        <td>MR. MIGUEL</td>
-                        <td> <button onclick="toggleNotification()">Click Here</button>
-<div id="notification-container">-- FULL REPORT -- 
-THE COMLAB 1 IN THE OLD BUILDING REQUIRES CLEANING AS IT IS CURRENTLY IN A DIRTY STATE.THE MOST RECENT OCCUPANTS OF THE ROOM WERE THE STUDENTS OF BSIT 1-1, UNDER THE SUPERVISION OF MR. JAN MARAVILLA
-THE USERS REPORTED THIS PROBLEM FROM MONDAY, JUNE 05, 2023 TO WEDNESDAY, JUNE 08, 2023   <br><button onclick="toggleNotification()">Back Here</button></div></td>
-                    </tr>
 
-                     <td>Old 203</td>
-                        <td>Dirty</td>
-                        <td>BSIT 1-1</td>
-                        <td>MR. MIGUEL</td>
-                      <td> <button onclick="toggleNotification()">Click Here</button>
-<div id="notification-container">-- FULL REPORT -- 
-THE COMLAB 1 IN THE OLD BUILDING REQUIRES CLEANING AS IT IS CURRENTLY IN A DIRTY STATE.THE MOST RECENT OCCUPANTS OF THE ROOM WERE THE STUDENTS OF BSIT 1-1, UNDER THE SUPERVISION OF MR. JAN MARAVILLA
-THE USERS REPORTED THIS PROBLEM FROM MONDAY, JUNE 05, 2023 TO WEDNESDAY, JUNE 08, 2023   <br><button onclick="toggleNotification()">Back Here</button></div></td>
-                    </tr>
-                   
-                     <td>Old 204</td>
-                        <td>Dirty</td>
-                        <td>BSIT 1-1</td>
-                        <td>MR. MIGUEL</td>
-                       <td> <button onclick="toggleNotification()">Click Here</button>
-<div id="notification-container">-- FULL REPORT -- 
-THE COMLAB 1 IN THE OLD BUILDING REQUIRES CLEANING AS IT IS CURRENTLY IN A DIRTY STATE.THE MOST RECENT OCCUPANTS OF THE ROOM WERE THE STUDENTS OF BSIT 1-1, UNDER THE SUPERVISION OF MR. JAN MARAVILLA
-THE USERS REPORTED THIS PROBLEM FROM MONDAY, JUNE 05, 2023 TO WEDNESDAY, JUNE 08, 2023   <br><button onclick="toggleNotification()">Back Here</button></div></td>
-                    </tr>
-
-                    <td>Old 301</td>
-                        <td>Dirty</td>
-                        <td>BSIT 1-1</td>
-                        <td>MR. MIGUEL</td>
-                        <td> <button onclick="toggleNotification()">Click Here</button>
-<div id="notification-container">-- FULL REPORT -- 
-THE COMLAB 1 IN THE OLD BUILDING REQUIRES CLEANING AS IT IS CURRENTLY IN A DIRTY STATE.THE MOST RECENT OCCUPANTS OF THE ROOM WERE THE STUDENTS OF BSIT 1-1, UNDER THE SUPERVISION OF MR. JAN MARAVILLA
-THE USERS REPORTED THIS PROBLEM FROM MONDAY, JUNE 05, 2023 TO WEDNESDAY, JUNE 08, 2023   <br><button onclick="toggleNotification()">Back Here</button></div></td>
-                    </tr>
-
-                     <td>Old 302</td>
-                        <td>Dirty</td>
-                        <td>BSIT 1-1</td>
-                        <td>MR. MIGUEL</td>
-                        <td> <button onclick="toggleNotification()">Click Here</button>
-<div id="notification-container">-- FULL REPORT -- 
-THE COMLAB 1 IN THE OLD BUILDING REQUIRES CLEANING AS IT IS CURRENTLY IN A DIRTY STATE.THE MOST RECENT OCCUPANTS OF THE ROOM WERE THE STUDENTS OF BSIT 1-1, UNDER THE SUPERVISION OF MR. JAN MARAVILLA
-THE USERS REPORTED THIS PROBLEM FROM MONDAY, JUNE 05, 2023 TO WEDNESDAY, JUNE 08, 2023   <br><button onclick="toggleNotification()">Back Here</button></div></td>
-                    </tr>
-
-                     <td>Old 303</td>
-                        <td>Dirty</td>
-                        <td>BSIT 1-1</td>
-                        <td>MR. MIGUEL</td>
-                       <td> <button onclick="toggleNotification()">Click Here</button>
-<div id="notification-container">-- FULL REPORT -- 
-THE COMLAB 1 IN THE OLD BUILDING REQUIRES CLEANING AS IT IS CURRENTLY IN A DIRTY STATE.THE MOST RECENT OCCUPANTS OF THE ROOM WERE THE STUDENTS OF BSIT 1-1, UNDER THE SUPERVISION OF MR. JAN MARAVILLA
-THE USERS REPORTED THIS PROBLEM FROM MONDAY, JUNE 05, 2023 TO WEDNESDAY, JUNE 08, 2023   <br><button onclick="toggleNotification()">Back Here</button></div></td>
-                    </tr>
-
-                     <td>Old 304</td>
-                        <td>Dirty</td>
-                        <td>BSIT 1-1</td>
-                        <td>MR. MIGUEL</td>
-                        <td> <button onclick="toggleNotification()">Click Here</button>
-<div id="notification-container">-- FULL REPORT -- 
-THE COMLAB 1 IN THE OLD BUILDING REQUIRES CLEANING AS IT IS CURRENTLY IN A DIRTY STATE.THE MOST RECENT OCCUPANTS OF THE ROOM WERE THE STUDENTS OF BSIT 1-1, UNDER THE SUPERVISION OF MR. JAN MARAVILLA
-THE USERS REPORTED THIS PROBLEM FROM MONDAY, JUNE 05, 2023 TO WEDNESDAY, JUNE 08, 2023   <br><button onclick="toggleNotification()">Back Here</button></div></td>
-                    </tr>
-                    
-                    <!-- Add more rows as needed -->
-                </tbody>
-            </table>
+    <!---------------
+          STATUS
+    ---------------->
+    <main>
+        <div class="spacer"></div>
+        <div class="table-section">
+            <div class="table-container">
+                <table class="status-table">
+                    <thead>
+                        <tr>
+                            <th>Room / Laboratory</th>
+                            <th>Problem</th>
+                            <th>Course</th>
+                            <th>Professor</th>
+                            <th>View Full Report</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr data-index="1">
+                            <td>ComLab 2</td>
+                            <td>Dirty</td>
+                            <td>BSIT 1-1</td>
+                            <td>Mr. Miguel</td>
+                            <td><button class="popup-btn" onclick="openPopup()">Click Here...</button></td>
+                        </tr>                        
+                        <tr data-index="2">
+                            <td>ComLab 2</td>
+                            <td>Dirty</td>
+                            <td>BSIT 1-1</td>
+                            <td>Mr. Miguel</td>
+                            <td><button class="popup-btn" onclick="openPopup()">Click Here...</button></td>
+                        </tr>                       
+                        <tr data-index="3">
+                            <td>ComLab 2</td>
+                            <td>Dirty</td>
+                            <td>BSIT 1-1</td>
+                            <td>Mr. Miguel</td>
+                            <td><button class="popup-btn" onclick="openPopup()">Click Here...</button></td>
+                        </tr>                        
+                        <tr data-index="4">
+                            <td>ComLab 2</td>
+                            <td>Dirty</td>
+                            <td>BSIT 1-1</td>
+                            <td>Mr. Miguel</td>
+                            <td><button class="popup-btn" onclick="openPopup()">Click Here...</button></td>
+                        </tr>                       
+                        <tr data-index="5">
+                            <td>ComLab 2</td>
+                            <td>Dirty</td>
+                            <td>BSIT 1-1</td>
+                            <td>Mr. Miguel</td>
+                            <td><button class="popup-btn" onclick="openPopup()">Click Here...</button></td>
+                        </tr>                        
+                        <tr data-index="6">
+                            <td>ComLab 2</td>
+                            <td>Dirty</td>
+                            <td>BSIT 1-1</td>
+                            <td>Mr. Miguel</td>
+                            <td><button class="popup-btn" onclick="openPopup()">Click Here...</button></td>
+                        </tr>                       
+                        <tr data-index="7">
+                            <td>ComLab 2</td>
+                            <td>Dirty</td>
+                            <td>BSIT 1-1</td>
+                            <td>Mr. Miguel</td>
+                            <td><button class="popup-btn" onclick="openPopup()">Click Here...</button></td>
+                        </tr>                        
+                        <tr data-index="8">
+                            <td>ComLab 2</td>
+                            <td>Dirty</td>
+                            <td>BSIT 1-1</td>
+                            <td>Mr. Miguel</td>
+                            <td><button class="popup-btn" onclick="openPopup()">Click Here...</button></td>
+                        </tr>                        
+                        <tr data-index="9">
+                            <td>ComLab 2</td>
+                            <td>Dirty</td>
+                            <td>BSIT 1-1</td>
+                            <td>Mr. Miguel</td>
+                            <td><button class="popup-btn" onclick="openPopup()">Click Here...</button></td>
+                        </tr>                        
+                        <tr data-index="10">
+                            <td>ComLab 2</td>
+                            <td>Dirty</td>
+                            <td>BSIT 1-1</td>
+                            <td>Mr. Miguel</td>
+                            <td><button class="popup-btn" onclick="openPopup()">Click Here...</button></td>
+                        </tr>                        
+                    </tbody>
+                </table>
+            </div>
         </div>
     </main>
 
-<script>
-    function toggleNotification() {
-        var notificationContainer = document.getElementById('notification-container');
+    <!---------------
+      POPUP
+    ---------------->
 
-        // Toggle the visibility of the notification container
-        if (notificationContainer.style.display === 'none' || notificationContainer.style.display === '') {
-            notificationContainer.style.display = 'block';
-        } else {
-            notificationContainer.style.display = 'none';
-        }
-    }
-</script>
-
-    <!-- FOOTER -->
-    <footer>
-        <div class="footer-content">
-            <span class="contact-title">Contact Us:</span>
-            <span class="contact-info">binan@pup.edu.ph</span>
-            <span class="contact-info">(049) 513-5034</span>
-            <span class="quick-links">Quick Links:</span>
-            <a href="https://www.pup.edu.ph/about/" class="footer-link">About PUP</a>
-            <a href="https://www.pup.edu.ph/about/contactus" class="footer-link">Contacts</a>
+    <div id="popupContainer" class="popup-container">
+        <div class="popup-content">
+            <span class="close-popup" onclick="closePopup()"></span>
+            <p>THE (ROOM / LABORATORY) IN THE (BUILDING) REQUIRES (SOLUTION) AS IT IS
+            CURRENTLY IN A (STATUS). THE MOST RECENT OCCUPANTS OF THE
+            ROOM WE'RE THE STUDENT'S OF (YR - SEC), UNDER THE SUPERVISION OF (PROFESSOR). <br>
+            
+            (NUMBER OF REPORT) USERS REPORTED THIS PROBLEM FROM MONDAY, (DATE) TO FRIDAY (DATE).</p>
+            <button id="backBtn" class="back-btn" onclick="closePopup()">GO BACK</button>                    
         </div>
+    </div>
+
+    <script>
+        // Use a class selector instead of an id selector
+        var popupButtons = document.querySelectorAll('.popup-btn');
+    
+        function openPopup() {
+            document.getElementById('popupContainer').style.display = 'flex';
+        }
+    
+        function closePopup() {
+            document.getElementById('popupContainer').style.display = 'none';
+        }
+    
+        // Attach click event listener to each button
+        popupButtons.forEach(function (button) {
+            button.addEventListener('click', openPopup);
+        });
+    </script>
+        
+    <!---------------
+          FOOTER
+    ---------------->
+    <footer>
+        <table class="footer-table">
+            <tr>
+                <td class="contact-title">Contact Us:</td>
+                <td class="contact-info">binan@pup.edu.ph</td>
+                <td class="contact-info">(049) 513-5034</td>
+                <td class="quick-links">Quick Links:</td>
+                <td class="quick-links">
+                    <a href="https://www.pup.edu.ph/about/" class="footer-link">About us</a>
+                </td>
+                
+                <td class="quick-links">
+                    <a href="https://www.pup.edu.ph/about/contactus" class="footer-link">Contacts</a>
+                </td>
+            </tr>
+        </table>
     </footer>
 </body>
 </html>

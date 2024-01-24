@@ -52,7 +52,7 @@
 
 .status-table tbody td:hover,
 .popup-btn:hover {
-    color: rgb(110, 0, 0);
+    color: rgb(255, 255, 255);
     transform: scale(0.96);
 }
 

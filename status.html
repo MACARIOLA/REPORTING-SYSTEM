@@ -62,55 +62,54 @@
                         <tbody>
                             <tr>
                                 <td>Old Building | Comlab 2</td>
-                                <td class="state-cell" onclick="openPopup()">Standby | Click Here...</td>
+                                <td class="state-cell"></td>
                                 <td>---</td>
                                 <td>---</td>
                             </tr>
-                            <tr>
                                 <td>Comlab 2</td>
-                                <td class="state-cell" onclick="openPopup()">Clining</td>
+                                <td class="state-cell"></td>
                                 <td>2023-01-01</td>
                                 <td>---</td>
                             </tr>
                             <tr>
                                 <td>Comlab 2</td>
-                                <td class="state-cell" onclick="openPopup()">Fixing</td>
+                                <td class="state-cell"></td>
                                 <td>2023-01-01</td>
                                 <td>---</td>
                             </tr>
                             <tr>
                                 <td>Comlab 2</td>
-                                <td class="state-cell" onclick="openPopup()">Replacing</td>
+                                <td class="state-cell"></td>
                                 <td>2023-01-01</td>
                                 <td>---</td>
                             </tr>
                             <tr>
                                 <td>Comlab 2</td>
-                                <td class="state-cell" onclick="openPopup()">Done</td>
+                                <td class="state-cell"></td>
                                 <td>2023-01-01</td>
                                 <td>2023-01-15</td>
                             </tr>
                             <tr>
                                 <td>Comlab 2</td>
-                                <td class="state-cell" onclick="openPopup()">Done</td>
+                                <td class="state-cell"></td>
                                 <td>2023-01-01</td>
                                 <td>2023-01-15</td>
                             </tr>
                             <tr>
                                 <td>Comlab 2</td>
-                                <td class="state-cell" onclick="openPopup()">Done</td>
+                                <td class="state-cell"></td>
                                 <td>2023-01-01</td>
                                 <td>2023-01-15</td>
                             </tr>
                             <tr>
                                 <td>Comlab 2</td>
-                                <td class="state-cell" onclick="openPopup()">Done</td>
+                                <td class="state-cell"></td>
                                 <td>2023-01-01</td>
                                 <td>2023-01-15</td>
                             </tr>
                             <tr>
                                 <td>Comlab 2</td>
-                                <td class="state-cell" onclick="openPopup()">Done</td>
+                                <td class="state-cell"></td>
                                 <td>2023-01-01</td>
                                 <td>2023-01-15</td>
                             </tr>
@@ -120,34 +119,46 @@
             </div>
         </main>
 
-
-    <!---------------
-          POPUP
-    ---------------->
-    <div id="popupContainer" class="popup-container">
-        <div class="popup-content">
-            <p>THE (ROOM / LABORATORY) IN THE (BUILDING) REQUIRES (SOLUTION) AS IT IS
-            CURRENTLY IN A (STATUS). THE MOST RECENT OCCUPANTS OF THE
-            ROOM WE'RE THE STUDENT'S OF (YR - SEC), UNDER THE SUPERVISION OF (PROFESSOR). <br>
-            (NUMBER OF REPORT) USERS REPORTED THIS PROBLEM FROM MONDAY, (DATE) TO FRIDAY (DATE).</p>
-            <button id="backBtn" class="back-btn" onclick="closePopup()">GO BACK</button>                 
-        </div>
-    </div>
-
-
-
     <!---------------
         MAIN SCRIPT
     ---------------->
-    <script>
-        function openPopup() {
-            document.getElementById('popupContainer').style.display = 'flex';
-        }
-    
-        function closePopup() {
-            document.getElementById('popupContainer').style.display = 'none';
-        }
-    </script>
+        <script>
+            // Function to create and append a dropdown menu to each state-cell
+            function createDropdown(cell) {
+                // Create a select element
+                var select = document.createElement("select");
+                select.onchange = function() {
+                    updateStatus(this); // Call the updateStatus function on change
+                };
+
+                // Define the options for the dropdown
+                var options = ["Standby", "Cleaning", "Fixing", "Replacing", "Done"];
+
+                // Loop through options and create option elements
+                for (var i = 0; i < options.length; i++) {
+                    var option = document.createElement("option");
+                    option.value = options[i].toLowerCase(); // Use lowercase values for consistency
+                    option.text = options[i];
+                    select.appendChild(option);
+                }
+
+                // Append the select element to the cell
+                cell.appendChild(select);
+            }
+
+            // Function to initialize the dropdown menus in state-cells
+            function initializeDropdowns() {
+                var stateCells = document.querySelectorAll('.state-cell');
+                stateCells.forEach(function(cell) {
+                    createDropdown(cell);
+                });
+            }
+
+            // Call the initializeDropdowns function when the document is loaded
+            document.addEventListener('DOMContentLoaded', initializeDropdowns);
+
+        </script>
+
 
         <!---------------
             FOOTER

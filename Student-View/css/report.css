@@ -1,0 +1,94 @@
+/* Add the following styles to your existing report.css */
+
+.content-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.signup-container,
+.signup2-container,
+.report-container {
+    width: 250px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #D8D5D0;
+}
+
+.signup-container {
+    margin-left: auto; /* Push signup-container to the right */
+}
+
+.signup2-container {
+    margin-right: auto; /* Push signup2-container to the left */
+}
+
+.report-container {
+    margin-top: 20px; /* Add margin between signup containers and report container */
+}
+
+.form-group {
+    margin-bottom: 18px;
+}
+
+label {
+    color: #07074d;
+    font-size: 14px;
+    line-height: 24px;
+    display: block;
+    margin-bottom: 10px;
+}
+
+select,
+input[type="text"],
+input[type="password"] {
+    width: 100%;
+    padding: 13px 22px;
+    border-radius: 5px;
+    border: 1px solid #dde3ec;
+    background: #ffffff;
+    font-weight: 500;
+    font-size: 16px;
+    color: #07074d;
+    outline: none;
+    resize: none;
+}
+
+select::placeholder,
+input[type="text"]::placeholder,
+input[type="password"]::placeholder {
+    color: #536387;
+}
+
+select:focus,
+input[type="text"]:focus,
+input[type="password"]:focus {
+    border-color: #6a64f1;
+    box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.05);
+}
+
+.buttons-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.signup-btn {
+    width: 100%;
+    font-size: 16px;
+    border-radius: 5px;
+    padding: 14px 25px;
+    border: none;
+    font-weight: 500;
+    background-color: #6a64f1;
+    color: white;
+    cursor: pointer;
+}
+
+.signup-btn:hover {
+    box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.05);
+}

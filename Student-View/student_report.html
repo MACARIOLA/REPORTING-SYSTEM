@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>PUP - RLCMRS | REPORT</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!---------------
+          FONTS
+    ---------------->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap">
+
+    <!---------------
+          LOGO
+    ---------------->
+    <link rel="icon" href="/images/PUPLogo.png" type="image/x-icon">
+    
+    <!---------------
+         MAIN CSS
+    ---------------->
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/Student-View/css/report.css">
+</head>
+
+
+
+<body>
+    <!---------------
+      NAVIGATION BAR
+    ---------------->
+    <header>
+        <nav>
+            <ul>
+                <li><a href="/Student-View/student_home.html" id="home">Home</a></li>
+                <li class="active"><a href="/Student-View/student_report.html" id="report">Report</a></li>
+                <li><a href="/Student-View/student_statistics.html" id="statistics">Statistics</a></li>
+                <li><a href="/Student-View/student_status.html" id="status">Status</a></li>
+                <li><a href="/Student-View/student_credits.html" id="credits">Credits</a></li>
+            </ul>
+        </nav>
+    </header>
+
+
+
+    <!---------------
+         REPORT
+    ---------------->
+    <div class="content-container">
+        <div class="signup-container">
+            <div class="form-group">
+                <label for="building"><b> Building: </b></label>
+                <select name="building" required>
+                    <option value="building1">Building 1</option>
+                    <option value="building2">Building 2</option>
+                    <option value="building3">Building 3</option>
+                    <option value="building4">Building 4</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="room"><b> Room/Laboratory: </b></label>
+                <select name="room" required>
+                    <option value="room1">Room 1</option>
+                    <option value="room2">Room 2</option>
+                    <option value="room3">Room 3</option>
+                    <option value="room4">Room 4</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="problem"><b> Problem: </b></label>
+                <select name="problem" required>
+                    <option value="issue1">Issue 1</option>
+                    <option value="issue2">Issue 2</option>
+                    <option value="issue3">Issue 3</option>
+                    <option value="issue4">Issue 4</option>
+                </select>
+            </div>
+        </div>
+    
+        <div class="signup2-container">
+            <div class="form-group">
+                <label for="course"><b> Course: </b></label>
+                <select name="course" required>
+                    <option value="course1">Course 1</option>
+                    <option value="course2">Course 2</option>
+                    <option value="course3">Course 3</option>
+                    <option value="course4">Course 4</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="professor"><b> Professor: </b></label>
+                <select name="professor" required>
+                    <option value="professor1">Professor 1</option>
+                    <option value="professor2">Professor 2</option>
+                    <option value="professor3">Professor 3</option>
+                    <option value="professor4">Professor 4</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="comment"><b> Comment: </b></label>
+                <select name="commentType" id="commentType" onchange="toggleCommentField()" required>
+                    <option value="none">None</option>
+                    <option value="other">Other with Comment</option>
+                </select>
+                <input type="text" name="comment" id="commentField" style="display: none;" placeholder="Type your comment here">
+            </div>
+        </div>
+    </div>
+    
+    <div class="report-container">
+        <button id="signupBtn" class="signup-btn" onclick="redirectTo('login_student.html')">Report</button>
+    </div>
+    
+    
+
+    <!---------------
+         MAIN JS
+    ---------------->
+    <script>
+        function toggleCommentField() {
+            var commentType = document.getElementById("commentType");
+            var commentField = document.getElementById("commentField");
+    
+            if (commentType.value === "other") {
+                commentField.style.display = "block";
+                commentField.required = true;
+            } else {
+                commentField.style.display = "none";
+                commentField.required = false;
+            }
+        }
+    </script>
+
+
+
+    <!---------------
+         FOOTER
+    ---------------->
+    <footer>
+        <div class="footer-content">
+            <span class="contact-title">Contact Us:</span>
+            <span class="contact-info">binan@pup.edu.ph</span>
+            <span class="contact-info">(049) 513-5034</span>
+            <span class="quick-links">Quick Links:</span>
+            <a href="https://www.pup.edu.ph/about/" class="footer-link">About PUP</a>
+            <a href="https://www.pup.edu.ph/about/contactus" class="footer-link">Contacts</a>
+        </div>
+    </footer>
+</body>
+</html>
